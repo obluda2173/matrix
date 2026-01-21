@@ -1,0 +1,37 @@
+#+title: Plan
+#+author: Erik An
+#+email: obluda2173@gmail.com
+#+date: <2026-01-21>
+#+lastmod: <2026-01-21 22:13>
+#+latex: \newpage
+#+latex_header: \setlength{\parindent}{0pt}
+#+latex_header: \setlength{\parskip}{1em}
+#+latex_header: \usepackage{amsmath}
+#+latex_header: \usepackage{amssymb}
+#+latex_header: \usepackage{amsthm}
+#+latex_header: \usepackage[margin=1in]{geometry}
+#+options: num:t
+#+startup: overview latexpreview inlineimages
+
+* Repo structure
+
+#+begin_src
+matrix_project/
+├── Project.toml             # Defines your project dependencies and name
+├── Manifest.toml            # (Auto-generated) Exact versions of dependencies
+├── README.md
+├── display                  # The provided display binary [cite: 1213]
+├── src/                     # Your shared library (Module)
+│   ├── MatrixProject.jl     # The entry point, exports Vector, Matrix, etc.
+│   ├── vector.rs.jl         # Implementation of your Vector struct
+│   ├── matrix.rs.jl         # Implementation of your Matrix struct
+│   └── complex.rs.jl        # (Bonus) Complex number logic [cite: 279]
+├── exercises/               # Executable scripts for each exercise
+│   ├── ex00.jl              # Solution for Ex 00
+│   ├── ex01.jl              # Solution for Ex 01
+│   ├── ...
+│   ├── ex14.jl              # Bonus: Projection Matrix
+│   └── ex15.jl              # Bonus: Complex Vector Spaces
+└── test/                    # Unit tests (optional but recommended)
+    └── runtests.jl
+#+end_src
